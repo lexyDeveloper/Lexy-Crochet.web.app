@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registro</title>
+    <link rel="stylesheet" href="/style_login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <h2 id="form-title">Registrarse</h2>
+            <form id="formulario">
+                <div id="register-fields">
+                    <input type="text" name="nombre_completo" placeholder="Nombre completo" required>
+                    <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input class="Contraseña" type="password" name="password" placeholder="Contraseña" required>
+                    <input type="text" name="direccion" placeholder="Dirección">
+                    <input type="text" name="telefono" placeholder="Teléfono">
+                    <select name="metodo_pago_preferido">
+                        <option value="OXXO">--Selecciona un metodo de pago--</option>
+                        <option value="OXXO">OXXO</option>
+                        <option value="Transferencia">Transferencia</option>
+                        <option value="PayPal">PayPal</option>
+                    </select>
+                    
+                </div>
+
+                <div id="login-fields" style="display: none;">
+                    <input type="text" name="nombre_usuario" placeholder="Nombre de usuario" required>
+                    <input ip="Contraseña" type="password" name="password" placeholder="Contraseña" required>
+                    <input ip="ContraseñaConfirmar" type="password" name="password" placeholder="Confirmar Contraseña" required>
+                </div>
+                <button type="menu" id="submit-btn">Registrarse</button>
+            </form>
+            <p id="toggle-form">¿Ya tienes cuenta? <a href="/paginas/log_reg/login_regis.html?register=false" onclick="toggleForm()">Iniciar sesión</a></p>
+            <p id="toggle-form"><img class="googleLogin" onclick="llamarGoogle()" src="/imagenes--/marca/icons8-google-48.png" alt=""></p>
+        </div>
+    </div>
+
+    <script src="/scripts/scriptLogin.js"></script>
+    <script type="module" src="/scripts/firebaseConect.js"></script>
+</body>
+</html>

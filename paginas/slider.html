@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="web icon" href="/imagenes--/marca/icono_negativo_fondoblanco.png">
+    <title>Slider</title>
+
+    <style>
+        /* Estilos del Slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px; /* Añadido borde redondeado */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .imgProducto{  /*CONSERVA ESTA PARTE*/
+            width: 300px;
+        }
+
+        .producto {
+            min-width: 300px; /* Cada producto tiene un ancho mínimo */
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 0 10px; /* Añadido margen entre los productos */
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 6px black;
+        }
+
+        .producto img {
+            max-width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los productos */
+        }
+
+        .producto h3 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .producto p {
+            font-size: 1rem;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #012e04;
+            transform: scale(1.2);
+        }
+
+        /* Botones de Navegación */
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        button.prev {
+            left: 10px;
+        }
+
+        button.next {
+            right: 10px;
+        }
+
+        button.prev:hover, button.next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Titulo */
+        h2.titulos {
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/paginas/index.html">Inicio</a>
+    </header>
+    <section id="productos">
+        <h2 class="titulos">Productos y Diseños Más Populares</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_1.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>$100</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_2.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>$200</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_1.jpg" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>$150</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_2.jpg" alt="Producto 4">
+                    <h3>Producto 4</h3>
+                    <p>$180</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_1.jpg" alt="Producto 5">
+                    <h3>Producto 5</h3>
+                    <p>$120</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_2.jpg" alt="Producto 6">
+                    <h3>Producto 6</h3>
+                    <p>$250</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_1.jpg" alt="Producto 7">
+                    <h3>Producto 7</h3>
+                    <p>$120</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_2.jpg" alt="Producto 8">
+                    <h3>Producto 8</h3>
+                    <p>$250</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_1.jpg" alt="Producto 9">
+                    <h3>Producto 9</h3>
+                    <p>$120</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img class="imgProducto" src="imagenes--/amig_2.jpg" alt="Producto 10">
+                    <h3>Producto 10</h3>
+                    <p>$250</p>
+                    <button>Agregar al Carrito</button>
+                </div>
+            </div>
+            <!-- Botones de Navegación -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slider');
+            const totalSlides = document.querySelectorAll('.producto').length;
+
+            // Calculamos el nuevo índice del slide
+            slideIndex += direction;
+
+            // Condición para hacer el wrap-around
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0; // Si estamos al final, volvemos al principio
+                slides.style.transition = 'none'; // Desactivamos la transición para no mostrar un salto
+                slides.style.transform = `translateX(0)`; // Volver al principio sin animación
+                setTimeout(() => { // Después de un corto tiempo, reactivamos la transición
+                    slides.style.transition = 'transform 0.5s ease';
+                    slideIndex = 1; // Para que el primer producto se desplace correctamente
+                    slides.style.transform = `translateX(-${slideIndex * (document.querySelector('.producto').clientWidth + 20)}px)`;
+                }, 50); // Timeout corto para evitar el salto visible
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1; // Si estamos al principio, volvemos al final
+                slides.style.transition = 'none'; // Desactivamos la transición para no mostrar un salto
+                const slideWidth = document.querySelector('.producto').clientWidth;
+                slides.style.transform = `translateX(-${(slideIndex) * (slideWidth + 20)}px)`;
+                setTimeout(() => { // Reajustamos la transición después de un corto tiempo
+                    slides.style.transition = 'transform 0.5s ease';
+                    slideIndex = totalSlides - 2; // Para que el penúltimo producto se desplace correctamente
+                    slides.style.transform = `translateX(-${(slideIndex) * (slideWidth + 20)}px)`;
+                }, 50); // Timeout corto
+            } else {
+                const slideWidth = document.querySelector('.producto').clientWidth;
+                slides.style.transform = `translateX(-${slideIndex * (slideWidth + 20)}px)`; // Desplazamiento normal
+            }
+        }
+    </script>
+</body>
+</html>

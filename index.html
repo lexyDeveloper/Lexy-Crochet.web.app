@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXY CROCHET</title>
+    <link rel="web icon" href="/imagenes--/marca/icono_negativo_fondoblanco.png">
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <script src="/scripts/scriptLogin.js"></script>
+    <!-- Barra de Navegación -->
+    <header>
+        <div class="cabezita">
+            <div class="marca">
+                <a href="/index.html"><img class="marca" src="/imagenes--/marca/icono_negativo.png" alt="Lexy-Crochet"></a>                
+            </div>
+
+            <div class="buscar">
+                <input id="busc" type="text" name="" class="Busqueda" placeholder="Buscar">
+            </div>
+            
+            <div class="personal">
+                <div class="carrito">
+                    <a class="carrito" href="#"><img width= "45px" src="/imagenes--/carrito.png" alt=""></a>
+                </div>
+                <div class="Usuario">
+                    <a id="user-icon" href="#"><img class="usuarioImg" src="/imagenes--/usuario/blackUsuarioDefault.jpeg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" style="font-size: 25px;">≡</div>
+        <nav>
+            <ul id="menu">
+                <input id="busc" onchange="busqueda()" type="text" name="" class="Busqueda2" placeholder="Buscar">
+                <p id="resultado"></p>
+                <li><a href="/paginas/venta.html">Venta</a></li>
+                <li><a href="/paginas/Materiales.html">Materiales</a></li>
+                <li><a href="/paginas/patrones.html">Patrones</a></li>
+                <li><a href="/paginas/Comunidad.html">Comunidad</a></li>
+                <li><a href="/paginas/Contactos.html">Contactos</a></li>
+                <div class="personal2">
+                    <div class="carrito">
+                        <a class="carrito" href="#"><img width= "45px" src="/imagenes--/carrito.png" alt=""></a>
+                    </div>
+                    <div id="user-icon" class="Usuario">
+                        <a href="#"><img class="usuarioImg" src="/imagenes--/usuario/blackUsuarioDefault.jpeg" alt=""></a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <div class="user-menu" id="user-menu">
+            <a href="/paginas/log_reg/login_regis.html?register=true">Iniciar sesión</a>
+            <a href="/paginas/log_reg/login_regis.html?register=false">Registrarse</a>
+            <a href="#">Mi Perfil</a>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Sección de Productos -->
+    <section id="productos">
+        <h2 class="titulos">productos y diseños mas populares</h2>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/Yoshi.jpg" alt="Producto 1">
+            <h3>Yoshi grande</h3>
+            <p>$400</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Yoshi%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/Stitch.jpg" alt="Producto 2">
+            <h3>Stitch pequeñño</h3>
+            <p>$150</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Stitch%20Pequeño%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/Quakity.jpg" alt="Producto 3">
+            <h3>Quaquity</h3>
+            <p>$400</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Quaquity%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+    </section>
+
+    <section id="productos">
+        <h2>lo nuevo -></h2>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/Merodi.jpg" alt="Producto 1">
+            <h3>My melody</h3>
+            <p>$100</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20My%20melody%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/Mimikiu.jpg" alt="Producto 2">
+            <h3>Mimikyu</h3>
+            <p>$100</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Mimikyu%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/CorajeElPerroCobarde.jpg" alt="Producto 3">
+            <h3>Coraje</h3>
+            <p>$100</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Cobarde%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/StitchG.jpeg" alt="Producto 4">
+            <h3>Stitch Grande</h3>
+            <p>$450</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Stitch%20Grande%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/Chimuelo.jpg" alt="Producto 4">
+            <h3>Chimuelo</h3>
+            <p>$140</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Chimuelo%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/DittoLlavero.jpg" alt="Producto 4">
+            <h3>Llavero Ditto</h3>
+            <p>$50</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Llavero%20Ditto%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <img class="imgProducto" src="/imagenes--/productos/KirbyLlavero.jpg" alt="Producto 4">
+            <h3>Llavero de Kirby</h3>
+            <p>$50</p>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Llavero%20de%20Kirby%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+        </div>
+    </section>
+
+
+    <!-- Carrito de Compras -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <p>No hay productos en el carrito.</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 lexy crochet
+             - Todos los derechos reservados.</p>
+            
+        <a target="_blank" id="instagramL" href="https://www.instagram.com/lexy_crochet_/" ><img class="enlaseLogo" src="/imagenes--/marca/InstagramLogo.png" alt="Pagina Instagram"></a>
+        <a target="_blank" href="https://wa.me/4452156956?text=Hola%20quiero%20informacion"><img class="enlaseLogo" alt="Chat on WhatsApp" src="/imagenes--/marca/WhatsappLogo.png"></a>
+    </footer>
+
+    <script src="/scripts/script.js"></script>
+
+</body>
+</html>
+

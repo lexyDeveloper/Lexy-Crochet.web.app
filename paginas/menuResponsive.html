@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+        }
+        .logo img {
+            width: 50px;
+        }
+        .search-bar input {
+            padding: 5px;
+            width: 200px;
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .icons img {
+            width: 40px;
+            cursor: pointer;
+        }
+        .user-menu {
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+        }
+        .user-menu a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 0;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+        }
+        .menu-toggle {
+            display: none;
+            background: #444;
+            color: white;
+            padding: 0px;
+            text-align: center;
+            cursor: pointer;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 2px 20px;
+            border-radius: 20px;
+            background-color:black ;
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                
+            }
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/imagenes--/marca/icono_negativo.png" alt="Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <div class="icons">
+            <img src="/imagenes--/carrito.png" alt="Carrito">
+            <img src="/imagenes--/usuario/blackUsuarioDefault.jpeg" alt="Usuario" id="user-icon">
+        </div>
+        <div class="user-menu" id="user-menu">
+            <a href="#">Iniciar sesión</a>
+            <a href="#">Registrarse</a>
+        </div>
+    </header>
+    <div class="menu-toggle" id="menu-toggle" style="font-size: 25px;">≡</div>
+    <nav>
+        <ul id="menu">
+            <li><a href="#">Venta</a></li>
+            <li><a href="#">Materiales</a></li>
+            <li><a href="#">Patrones</a></li>
+            <li><a href="#">Comunidad</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.getElementById('user-icon').addEventListener('click', function() {
+            var menu = document.getElementById('user-menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        });
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

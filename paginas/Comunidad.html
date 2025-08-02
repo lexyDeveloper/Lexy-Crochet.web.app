@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXY CROCHET - Comunidad</title>
+    <link rel="web icon" href="/imagenes--/marca/icono_negativo_fondoblanco.png">
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+     <header>
+        <div class="cabezita">
+            <div class="marca">
+                <a href="/index.html"><img class="marca" src="/imagenes--/marca/icono_negativo.png" alt="Lexy-Crochet"></a>                
+            </div>
+
+            <div class="buscar">
+                <input id="busc" type="text" name="" class="Busqueda" placeholder="Buscar">
+            </div>
+            
+            <div class="personal">
+                <div class="carrito">
+                    <a class="carrito" href="#"><img width= "45px" src="/imagenes--/carrito.png" alt=""></a>
+                </div>
+                <div class="Usuario">
+                    <a id="user-icon" href="#"><img class="usuarioImg" src="/imagenes--/usuario/blackUsuarioDefault.jpeg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" style="font-size: 25px;">≡</div>
+        <nav>
+            <ul id="menu">
+                <input id="busc" type="text" name="" class="Busqueda2" placeholder="Buscar">
+                <p id="resultado"></p>
+                <li><a href="/paginas/venta.html">Venta</a></li>
+                <li><a href="/paginas/Materiales.html">Materiales</a></li>
+                <li><a href="/paginas/patrones.html">Patrones</a></li>
+                <li><a href="/paginas/Comunidad.html">Comunidad</a></li>
+                <li><a href="/paginas/Contactos.html">Contactos</a></li>
+                <div class="personal2">
+                    <div class="carrito">
+                        <a class="carrito" href="#"><img width= "45px" src="/imagenes--/carrito.png" alt=""></a>
+                    </div>
+                    <div id="user-icon" class="Usuario">
+                        <a href="#"><img class="usuarioImg" src="/imagenes--/usuario/blackUsuarioDefault.jpeg" alt=""></a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <div class="user-menu" id="user-menu">
+            <a href="#">Iniciar sesión</a>
+            <a href="#">Registrarse</a>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Sección de Productos -->
+    <section id="comunidad">
+        <h2 class="titulos">Comunidad Lexy Crochet</h2>
+    
+        <div class="comunidad-tabs">
+            <button class="tab-button active" data-tab="foros">Foros</button>
+            <button class="tab-button" data-tab="galeria">Galería de Proyectos</button>
+            <button class="tab-button" data-tab="reseñas">Reseñas y Calificaciones</button>
+        </div>
+    
+        <div class="tab-content" id="foros">
+            <div class="foro-tema">
+                <h3>¿Qué hilo recomiendan para amigurumis?</h3>
+                <p><strong>Gael69:</strong> Yo uso algodón mercerizado, es suave y resistente.</p>
+                <p><strong>MigueA:</strong> A mí me gusta el hilo de bambú, es muy ecológico.</p>
+                <button href="#">Ver más comentarios</button>
+            </div>
+            <div class="foro-tema">
+                <h3>Patrones gratuitos para principiantes</h3>
+                <p><strong>leddy:</strong> Encontré un patrón de llavero muy fácil en [enlace].</p>
+                <p><strong>leoAVega:</strong> Yo tengo un patrón de bufanda sencilla que puedo compartir.</p>
+                <button href="#">Ver más comentarios</button>
+            </div>
+            <button class="nuevo-tema">Nuevo Tema</button>
+        </div>
+    
+        <div class="tab-content" id="galeria" style="display: none;">
+            <div class="galeria-item">
+                <img src="imagenes--/proyecto1.jpg" alt="Proyecto 1">
+                <p>Amigurumi de oso por Usuario5</p>
+            </div>
+            <div class="galeria-item">
+                <img src="imagenes--/proyecto2.jpg" alt="Proyecto 2">
+                <p>Chal elegante por Usuario6</p>
+            </div>
+            <button class="subir-proyecto">Subir Proyecto</button>
+        </div>
+    
+        <div class="tab-content" id="reseñas" style="display: none;">
+            <div class="reseña-item">
+                <h4>Patrón Amigurumi Oso</h4>
+                <p><strong>Gael69:</strong> Muy fácil de seguir, me encantó el resultado. 5 estrellas.</p>
+                <div class="calificacion">★★★★★</div>
+            </div>
+            <div class="reseña-item">
+                <h4>Patrón Chal Elegante</h4>
+                <p><strong>AlexisGRG:</strong> Las instrucciones no eran muy claras en algunas partes. 3 estrellas.</p>
+                <div class="calificacion">★★★☆☆</div>
+            </div>
+            <button class="nueva-reseña">Nueva Reseña</button>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <p>No hay productos en el carrito.</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 lexy crochet
+             - Todos los derechos reservados.</p>
+            
+        <a target="_blank" id="instagramL" href="https://www.instagram.com/lexy_crochet_/" ><img class="enlaseLogo" src="/imagenes--/marca/InstagramLogo.png" alt="Pagina Instagram"></a>
+        <a target="_blank" href="https://wa.me/4452156956?text=Hola%20quiero%20informacion"><img class="enlaseLogo" alt="Chat on WhatsApp" src="/imagenes--/marca/WhatsappLogo.png"></a>
+    </footer>
+    <script src="/scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    font-family: "Quicksand", sans-serif;    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('/imagenes--/marca/BackgroundLogin.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor con blur */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra los hijos horizontalmente */
+    width: 100%;
+}
+
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.8);
+    box-sizing: border-box; /* asegura que el padding no rompa el ancho */
+}
+
+
+/* Botón */
+button {
+    font-size: 130%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cambio de formulario */
+#toggle-form, p {
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+
+#toggle-form a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 130%;
+}
+
+@media (max-width: 750px) {
+    .container {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        border-radius: 10px;
+        width: 70%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+}
