@@ -8,9 +8,9 @@ Sitio web de tienda online de productos crochet (amigurumis, materiales, patrone
 - Librería UI o CSS: (Bootstrap, Tailwind, Material UI).
 - Backend / base de datos: (Firebase, Node.js, etc.) — si aplica.
 
-## Capturas (o Vista previa)
+## Vista previa
 
-*(Aquí puedes incluir imágenes de la interfaz o un GIF que muestre la tienda.)*
+![Captura de la pagina](imagenes--/marca/captura.png)
 
 ## Secciones destacadas
 
@@ -21,8 +21,3 @@ Sitio web de tienda online de productos crochet (amigurumis, materiales, patrone
 - **Contactos**: información o formulario de contacto.
 - **Login / Registro / Mi Perfil**: autenticación de usuarios.
 
-## Instalación local
-
-1. Clona el repositorio:
-   ```bash
-   git clone <URL-del-repositorio>
