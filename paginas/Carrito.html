@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEXY CROCHET - Patrones</title>
+    <title>LEXY CROCHET</title>
     <link rel="web icon" href="/imagenes--/marca/icono_negativo_fondoblanco.png">
     <link rel="stylesheet" href="/styles.css">
     
 </head>
 <body>
+    <script src="/scripts/scriptLogin.js"></script>
     <!-- Barra de Navegación -->
     <header>
         <div class="cabezita">
@@ -32,7 +33,7 @@
         <div class="menu-toggle" id="menu-toggle" style="font-size: 25px;">≡</div>
         <nav>
             <ul id="menu">
-                <input id="busc" type="text" name="" class="Busqueda2" placeholder="Buscar">
+                <input id="busc" onchange="busqueda()" type="text" name="" class="Busqueda2" placeholder="Buscar">
                 <p id="resultado"></p>
                 <li><a href="/paginas/venta.html">Venta</a></li>
                 <li><a href="/paginas/Materiales.html">Materiales</a></li>
@@ -50,28 +51,24 @@
             </ul>
         </nav>
         <div class="user-menu" id="user-menu">
-            <a href="#">Iniciar sesión</a>
-            <a href="#">Registrarse</a>
+            <a href="/paginas/log_reg/login_regis.html?register=true">Iniciar sesión</a>
+            <a href="/paginas/log_reg/login_regis.html?register=false">Registrarse</a>
+            <a href="index.html">Mi Perfil</a>
         </div>
     </header>
-    <br><br><br><br><br><br><br><br><br><br>
-    <section class="DocView">
-        <div class="pdf-container">
-            <iframe src="DOCUMENTOS/PatronBuoLLavero.pdf" title="Visor de PDF">
-                Este navegador no soporta iframes. Por favor, descarga el PDF para verlo: <a href="DOCUMENTOS/PatronBuoLLavero.pdf">Descargar PDF</a>
-            </iframe>
-        </div>
-    </section>
     <br><br><br><br><br>
+
     <!-- Carrito de Compras -->
-    <section id="carritoespacio">
+    
+    <section id="carritoespacioCompleto">
         <h2>Carrito de Compras</h2>
         <p id="carrito-vacio">No hay productos en el carrito.</p>
         <div id="carrito"></div>
     </section>
+
     <script src="/scripts/productos.js"></script>
     <script src="/scripts/script.js"></script>
-
+    
     <!-- Pie de Página -->
     <footer>
         <p>&copy; 2025 lexy crochet
@@ -80,5 +77,7 @@
         <a target="_blank" id="instagramL" href="https://www.instagram.com/lexy_crochet_/" ><img class="enlaseLogo" src="/imagenes--/marca/InstagramLogo.png" alt="Pagina Instagram"></a>
         <a target="_blank" href="https://wa.me/4452156956?text=Hola%20quiero%20informacion"><img class="enlaseLogo" alt="Chat on WhatsApp" src="/imagenes--/marca/WhatsappLogo.png"></a>
     </footer>
+
 </body>
 </html>
+
