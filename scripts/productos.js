@@ -4,13 +4,14 @@ const CarritoVacio = document.getElementById('carrito-vacio');
 // Recuperar carrito desde localStorage si existe
 let ProductosDelCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+
 const listaProductos = [
   {titulo: 'My melody',precio: 100,imagen: '/imagenes--/productos/Merodi.jpg', tipo: 'peluche'},
-  {titulo: 'Mimikyu',precio: 100,imagen: '/imagenes--/productos/Mimikiu.jpg', tipo: 'peluche'},
+  {titulo: 'Mimikyu',precio: 100,imagen: '/imagenes--/productos/Mimikiu.jpg', tipo: 'peluche', tipo2:'Pokemon'},
   {titulo: 'Coraje',precio: 100,imagen: '/imagenes--/productos/CorajeElPerroCobarde.jpg', tipo: 'peluche'},
   {titulo: 'Stitch Grande',precio: 450,imagen: '/imagenes--/productos/StitchG.jpeg', tipo: 'peluche'},
   {titulo: 'Chimuelo',precio: 140,imagen: '/imagenes--/productos/Chimuelo.jpg', tipo: 'peluche'},
-  {titulo: 'Llavero Ditto',precio: 50,imagen: '/imagenes--/productos/DittoLlavero.jpg', tipo: 'llavero'},
+  {titulo: 'Llavero Ditto',precio: 50,imagen: '/imagenes--/productos/DittoLlavero.jpg', tipo: 'llavero', tipo2:'Pokemon'},
   {titulo: 'Llavero Kirby',precio: 50,imagen: '/imagenes--/productos/KirbyLlavero.jpg', tipo: 'llavero'},
   {titulo: 'Ramo Graduacion',precio: 460,imagen: 'imagenes--/productos/ramoGraduacion.jpeg', tipo: 'flores'},
   {titulo: 'Ramo 6 flores',precio: 160,imagen: 'imagenes--/productos/Ramo6flores.jpeg', tipo: 'flores'},
@@ -24,6 +25,59 @@ mostrarCarrito();
 
 // Productos Nuevos Apareciendo de forma dinámica
 const seccionProductos = document.getElementById('productosNuevos');
+
+function actualizar(){
+  seccionProductos.innerHTML = "";
+  for (let producto of listaProductos) {
+    const div = document.createElement('div');
+    div.classList.add('producto');
+
+    const img = document.createElement('img');
+    img.classList.add('imgProducto');
+    img.src = producto.imagen;
+    img.alt = producto.titulo;
+
+    const h3 = document.createElement('h3');
+    h3.textContent = producto.titulo;
+
+    const p = document.createElement('p');
+    p.textContent = `$${producto.precio}`;
+
+    const boton = document.createElement('button');
+    boton.textContent = 'Agregar al Carrito';
+
+    boton.onclick = () => {  
+      if (confirm(`¿Deseas agregar ${producto.titulo} al carrito?`)) {
+        ProductosDelCarrito.push({titulo: producto.titulo, precio: producto.precio});
+        guardarCarrito();
+        mostrarCarrito();
+      }
+    }
+
+    const Whatsapp = document.createElement('img');
+    Whatsapp.classList.add('enlaseLogo2');
+    Whatsapp.src = 'imagenes--/marca/WhatsappLogo.png';
+    Whatsapp.alt = 'Encargar';
+    
+    const mensajeWhatsApp = `Hola me interesa el ${producto.titulo} por $${producto.precio} %0Ahttps://lexy-crochet.web.app`;
+    const enlaceWhatsApp = `https://wa.me/4452156956?text=${mensajeWhatsApp}`;
+
+    const enlace = document.createElement('a');
+    enlace.href = enlaceWhatsApp;
+    enlace.target = '_blank';
+    enlace.appendChild(Whatsapp);
+
+    div.appendChild(img);
+    div.appendChild(h3);
+    div.appendChild(p);
+    div.appendChild(boton);
+    div.appendChild(enlace);
+
+    seccionProductos.appendChild(div);
+  }
+
+}
+  
 
 for (let producto of listaProductos) {
   const div = document.createElement('div');
@@ -154,3 +208,65 @@ function mostrarCarrito() {
     CarritoDeCompras.innerHTML = "";
   }
 }
+
+
+function  filtraproductos(name){
+  seccionProductos.innerHTML = "";
+  for (let producto of listaProductos) {
+    if (name == producto.tipo || name == producto.tipo2){
+        const div = document.createElement('div');
+        div.classList.add('producto');
+
+        const img = document.createElement('img');
+        img.classList.add('imgProducto');
+        img.src = producto.imagen;
+        img.alt = producto.titulo;
+
+        const h3 = document.createElement('h3');
+        h3.textContent = producto.titulo;
+
+        const p = document.createElement('p');
+        p.textContent = `$${producto.precio}`;
+
+        const boton = document.createElement('button');
+        boton.textContent = 'Agregar al Carrito';
+
+        boton.onclick = () => {  
+          if (confirm(`¿Deseas agregar ${producto.titulo} al carrito?`)) {
+            ProductosDelCarrito.push({titulo: producto.titulo, precio: producto.precio});
+            guardarCarrito();
+            mostrarCarrito();
+          }
+        }
+
+        const Whatsapp = document.createElement('img');
+        Whatsapp.classList.add('enlaseLogo2');
+        Whatsapp.src = 'imagenes--/marca/WhatsappLogo.png';
+        Whatsapp.alt = 'Encargar';
+        
+        const mensajeWhatsApp = `Hola me interesa el ${producto.titulo} por $${producto.precio} %0Ahttps://lexy-crochet.web.app`;
+        const enlaceWhatsApp = `https://wa.me/4452156956?text=${mensajeWhatsApp}`;
+
+        const enlace = document.createElement('a');
+        enlace.href = enlaceWhatsApp;
+        enlace.target = '_blank';
+        enlace.appendChild(Whatsapp);
+
+        div.appendChild(img);
+        div.appendChild(h3);
+        div.appendChild(p);
+        div.appendChild(boton);
+        div.appendChild(enlace);
+
+        seccionProductos.appendChild(div);
+      }
+      if(name == ""){
+        actualizar();
+      } 
+  }
+}
+
+
+
+
+//peluche  llavero  flores  Pokemon

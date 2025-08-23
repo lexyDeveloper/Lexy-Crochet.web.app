@@ -65,24 +65,33 @@
             <img class="imgProducto" src="/imagenes--/productos/Yoshi.jpg" alt="Producto 1">
             <h3>Yoshi grande</h3>
             <p>$400</p>
-            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Yoshi%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Yoshi%0Ahttps://lexy-crochet.web.app'">Encargar por Whatsapp</button>
         </div>
         <div class="producto">
             <img class="imgProducto" src="/imagenes--/productos/Stitch.jpg" alt="Producto 2">
             <h3>Stitch pequeñño</h3>
             <p>$150</p>
-            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Stitch%20Pequeño%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Stitch%20Pequeño%0Ahttps://lexy-crochet.web.app'">Encargar por Whatsapp</button>
         </div>
         <div class="producto">
             <img class="imgProducto" src="/imagenes--/productos/Quakity.jpg" alt="Producto 3">
             <h3>Quaquity</h3>
             <p>$400</p>
-            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Quaquity%0Ahttps://lexy-crochet.web.app'">Agregar al Carrito</button>
+            <button role="link" onclick="window.location='https://wa.me/4452156956?text=Hola%20me%20interesa%20el%20Quaquity%0Ahttps://lexy-crochet.web.app'">Encargar por Whatsapp</button>
         </div>
     </section>
-
-    <section id="productosNuevos">
+    
+    <section id="productosNuevosseccion">
         <h2>lo nuevo -></h2>
+        <select id="filtro" onchange="filtraproductos(this.value)">
+            <option value="">-- Mostrarlos todos --</option>
+            <option value="peluche">Peluche</option>
+            <option value="llavero">Llavero</option>
+            <option value="flores">Flores</option>
+            <option value="Pokemon">Pokemon</option>
+        </select>
+        <!-- peluche  llavero  flores  Pokemon -->
+        <div id="productosNuevos"></div>
         <!-- Aquí se insertarán los productos con JS -->
     </section>
 

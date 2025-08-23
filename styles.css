@@ -265,7 +265,7 @@ nav ul li a:hover {
     margin: 10px 30px;
 }
 
-#productos, #productosNuevos {
+#productos, #productosNuevos, #productosNuevosseccion {
     text-align: center;
     padding: 2rem 1rem;
 }
@@ -273,6 +273,50 @@ nav ul li a:hover {
 #productos h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+}
+
+#filtro {
+font-weight:bolder;
+padding: 10px 15px;
+font-size: 16px;
+border-radius: 8px;
+border: 2px solid #ccc;
+background-color: #f9f9f9;
+color: #333;
+cursor: pointer;
+outline: none;
+transition: 0.3s ease;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hover */
+#filtro:hover {
+border-color: var(--background-color-1);   /* moradito */
+background-color: #ffffff;
+}
+
+/* Cuando está enfocado (seleccionado) */
+#filtro:focus {
+border-color: var(--background-color-1);
+box-shadow: 0 0 8px rgba(0, 134, 18, 0.5);
+}
+
+#filtro option {
+  background-color: #f1f8f4;  /* fondo verdoso claro */
+  color: #2e7d32;             /* texto verde oscuro */
+  padding: 10px;
+}
+
+/* Hover sobre una opción (solo visible en navegadores que lo permiten) */
+#filtro option:hover {
+  background-color: #66bb6a;
+  color: #fff;
+}
+
+/* Opción seleccionada */
+#filtro option:checked {
+  background-color: #43a047 !important; /* verde más fuerte */
+  color: #fff !important;
 }
 
 .producto, .Desarrollador {

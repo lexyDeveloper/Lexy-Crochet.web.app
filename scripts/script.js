@@ -31,15 +31,20 @@ tabButtons.forEach(button => {
 }); 
 
 
+
+// buscador.js
+
 const resultado = document.getElementById('resultado');
 let esconderRes;
 
 document.addEventListener("keyup", e => {
-    if (e.target.matches("#busc")) {
-        if (e.target.value != ""){
+    let busqueda = e.target.value 
+    if (e.target.matches("#busc") ) {
+        if ( busqueda != ""){
             if (esconderRes) {
                 clearTimeout(esconderRes);
             }
+            
             resultado.style.display = "block";
             resultado.textContent = "No se encontró resultado para '" + e.target.value + "'";
 
@@ -48,3 +53,5 @@ document.addEventListener("keyup", e => {
         
     }
 });
+
+
