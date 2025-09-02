@@ -1,0 +1,97 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+*::selection{
+    background-color: #29961b;
+    color: white;
+}
+
+body {
+    zoom: 150%;
+  background: #a6ffa3;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #29961b, #08fe00);
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Sección principal */
+.infografia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px; /* ancho máximo del contenido */
+  margin: 0 auto;    /* centra horizontalmente */
+}
+
+
+.tarjeta {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* mantiene proporción y recorta */
+  border-radius: 1rem; /* opcional, para que siga el borde de la tarjeta */
+  display: block;      /* elimina espacios fantasmas */
+}
+
+/* Estado visible con scroll */
+.tarjeta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+li, a{
+    list-style: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body{
+      zoom: 100%;
+    }
+    .infografia {
+        padding: 1rem;
+    }
+    .tarjeta {
+        padding: 0.5rem;
+    }
+}

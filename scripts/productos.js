@@ -8,7 +8,7 @@ let ProductosDelCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const listaProductos = [
   {titulo: 'My melody',precio: 100,imagen: '/imagenes--/productos/Merodi.jpg', tipo: 'peluche'},
   {titulo: 'Mimikyu',precio: 100,imagen: '/imagenes--/productos/Mimikiu.jpg', tipo: 'peluche', tipo2:'Pokemon'},
-  {titulo: 'Coraje',precio: 100,imagen: '/imagenes--/productos/CorajeElPerroCobarde.jpg', tipo: 'peluche'},
+  {titulo: 'Coraje',precio: 100,imagen: '/imagenes--/productos/CorajeElPerroCobarde.jpg', tipo: 'peluche', tipo2:'animal'},
   {titulo: 'Stitch Grande',precio: 450,imagen: '/imagenes--/productos/StitchG.jpeg', tipo: 'peluche'},
   {titulo: 'Chimuelo',precio: 140,imagen: '/imagenes--/productos/Chimuelo.jpg', tipo: 'peluche'},
   {titulo: 'Llavero Ditto',precio: 50,imagen: '/imagenes--/productos/DittoLlavero.jpg', tipo: 'llavero', tipo2:'Pokemon'},
@@ -18,7 +18,8 @@ const listaProductos = [
   {titulo: 'Ramo 10 flores',precio: 240,imagen: 'imagenes--/productos/Ramo10flores.jpeg', tipo: 'flores'},
   {titulo: 'flor individual',precio: 40,imagen: 'imagenes--/productos/florindividual.jpeg', tipo: 'flores'},
   {titulo: 'Beisbolista',precio: 300,imagen: 'imagenes--/productos/Beisbolista.jpeg', tipo: 'peluche'},
-  {titulo: 'LLavero de buo',precio: 50,imagen: 'imagenes--/productos/Buo.jpeg', tipo: 'llavero'}
+  {titulo: 'LLavero de buo',precio: 50,imagen: 'imagenes--/productos/Buo.jpeg', tipo: 'llavero', tipo2:'animal'},
+  {titulo: 'Dinosaurio',precio: 400,imagen: 'imagenes--/productos/Dinosaurio.jpg', tipo: 'peluche', tipo2:'animal'}
 ];
 
 mostrarCarrito();
@@ -265,8 +266,3 @@ function  filtraproductos(name){
       } 
   }
 }
-
-
-
-
-//peluche  llavero  flores  Pokemon
