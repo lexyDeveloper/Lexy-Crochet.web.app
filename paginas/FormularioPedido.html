@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Personalizado Crochet</title>
+    <link rel="web icon" href="/imagenes--/marca/icono_negativo_fondoblanco.png">
+
+  <style>
+    body {
+        background: linear-gradient(90deg, rgba(108, 255, 94, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(108, 255, 94, 1) 100%); 
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+    input, textarea, select, button {
+        width: 97%;
+        padding: 8px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    #preview {
+        margin-top: 10px;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background: #45a049;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto 15px auto; /* centra la imagen y da espacio debajo */
+        max-width: 80px; /* ajusta el tamaño del logo */
+    }
+  </style>
+</head>
+<body>
+
+    <form id="pedidoForm">
+        <a href="/index.html"><img class="logo" src="/imagenes--/marca/icono_negativo.png" alt="Lexy-Crochet"></a>
+        <center><h2>Pedido Personalizado Lexy Crochet</h2></center>
+        <br>
+        <label for="foto">Sube una foto de referencia:</label>
+        <input type="file" id="foto" accept="image/*">
+        <img id="preview" src="" alt="Vista previa">
+
+        <label for="titulo">Nombre/Título (opcional):</label>
+        <input type="text" id="titulo" placeholder="Ej: Pikachu, Osito...">
+
+        <label for="descripcion">Descripción breve:</label>
+        <textarea id="descripcion" rows="3" placeholder="Colores, detalles, accesorios..." required></textarea>
+
+        <label for="tamano">Tamaño (cm):</label>
+        <input type="number" id="tamano" placeholder="Ej: 20" required>
+
+        <label for="fecha">Fecha de envío deseada:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="medio">Enviar por:</label>
+        <select id="medio">
+            <option value="correo">Correo</option>
+            <option value="whatsapp">WhatsApp</option>
+        </select>
+
+        <button type="submit">Enviar pedido</button>
+  </form>
+
+  <script>
+        const form = document.getElementById('pedidoForm');
+        const fotoInput = document.getElementById('foto');
+        const preview = document.getElementById('preview');
+
+        // Vista previa de la imagen
+        fotoInput.addEventListener('change', () => {
+        const file = fotoInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = e => {
+            preview.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+        });
+
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const titulo = document.getElementById('titulo').value;
+        const descripcion = document.getElementById('descripcion').value;
+        const tamano = document.getElementById('tamano').value;
+        const fecha = document.getElementById('fecha').value;
+        const medio = document.getElementById('medio').value;
+
+        const mensaje = `Nuevo pedido personalizado:%0A
+        ${titulo ? "Título: " + titulo + "%0A" : ""}
+        Descripción: ${descripcion}%0A
+        Tamaño: ${tamano} cm%0A
+        Fecha de envío solicitada: ${fecha}`;
+
+        if (medio === "correo") {
+            window.location.href = `mailto:alexgrg.123.123?subject=Nuevo pedido crochet&body=${mensaje}`;
+        } else {
+            const telefono = "524452156956"; // ejemplo: 521234567890
+            window.open(`https://wa.me/${telefono}?text=${mensaje}`, "_blank");
+        }
+        });
+  </script>
+
+</body>
+</html>

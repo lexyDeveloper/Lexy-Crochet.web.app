@@ -13,12 +13,15 @@ body {
     margin: 0;
     padding: 0;
     background: #6CFF5E;
-background: linear-gradient(90deg, rgba(108, 255, 94, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(108, 255, 94, 1) 100%);
+    background: linear-gradient(90deg, rgba(108, 255, 94, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(108, 255, 94, 1) 100%);
     color: #333;
     height: 100%;
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+}
 ::selection{
     background-color: #006b07;
     color: white;
@@ -47,6 +50,7 @@ input:focus{
     outline: none;
     width: 230px;
 }
+
 
 /*menu*/
 header {
@@ -379,6 +383,34 @@ box-shadow: 0 0 8px rgba(0, 134, 18, 0.5);
 .producto button:hover {
     background: #012e04;
     transform: scale(1.1);
+}
+
+.PedidoPersonalizado {
+    display: block;
+    margin: 0 auto 15px auto;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 1s;
+}
+
+.PedidoPersonalizado:hover {
+    background: #73ff7c;
+    font-weight: bold;
+    animation: bailar 4s infinite;
+}
+
+@keyframes bailar {
+  0%   { transform: rotate(0deg) translateY(0); }
+  20%  { transform: rotate(-10deg) translateY(-3px); }
+  40%  { transform: rotate(10deg) translateY(-3px); }
+  60%  { transform: rotate(-8deg) translateY(0); }
+  80%  { transform: rotate(8deg) translateY(0); }
+  100% { transform: rotate(0deg) translateY(0); }
 }
 
 #carrito{
