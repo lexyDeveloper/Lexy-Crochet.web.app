@@ -10,7 +10,7 @@ Sitio web de tienda online de productos crochet (amigurumis, materiales, patrone
 
 ## Vista previa
 
-![Captura de la pagina](imagenes--/marca/captura.png)
+![Captura de la pagina](captura.png)
 
 ## Secciones destacadas
 
